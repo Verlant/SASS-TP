@@ -1,0 +1,57 @@
+// start definition des mixin
+@mixin marge($size) {
+  margin: $size;
+}
+@mixin square($color, $size) {
+  background-color: $color;
+  width: $size;
+  height: $size;
+}
+@mixin circle($color, $size, $radius) {
+  @include square($color, $size);
+  border-radius: $radius;
+}
+
+@mixin figure($color, $size, $radius, $flag_circle: false) {
+  @if $flag_circle {
+    @include circle($color, $size, $radius);
+  } @else {
+    @include square($color, $size);
+  }
+}
+// end definition des mixin
+
+// start appel des mixin
+// .fig_1,
+// .fig_2 {
+//   @include marge(10px);
+// }
+// .fig_3,
+// .fig_4 {
+//   @include marge(20px);
+// }
+// .fig_1 {
+//     @include square(red, 200px);
+// }
+// .fig_2 {
+//     @include square(blue, 200px);
+// }
+// .fig_3 {
+//     @include circle(red, 200px, 50%);
+// }
+// .fig_4 {
+//     @include circle(blue, 200px, 50%);
+// }
+// .fig_1 {
+//   @include figure(red, 200px, 50%, false);
+// }
+// .fig_2 {
+//   @include figure(blue, 200px, 50%, false);
+// }
+// .fig_3 {
+//   @include figure(red, 200px, 50%, true);
+// }
+// .fig_4 {
+//   @include figure(blue, 200px, 50%, true);
+// }
+// end appel des mixin

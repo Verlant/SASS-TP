@@ -1,0 +1,136 @@
+section {
+  width: 1200px;
+  height: 500px;
+  border: 2px solid #397ea8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 250px;
+  height: 450px;
+  border: 1px solid #eceef1;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  overflow: hidden;
+}
+
+#card_1 .card__maj {
+  width: 200px;
+  height: 200px;
+  border: 0px solid #397ea8;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  overflow: visible;
+  background: linear-gradient(to left, #533d9c, #9f5ee9);
+  opacity: 1;
+}
+#card_1 .card__min {
+  width: 150px;
+  height: 150px;
+  border: 0px solid #397ea8;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 50%;
+  left: auto;
+  z-index: 2;
+  overflow: visible;
+  background: linear-gradient(to right, #64db73, #50e0c1);
+  opacity: 0.8;
+}
+#card_2 .card__maj {
+  width: 300px;
+  height: 350px;
+  border-radius: 50%;
+  position: absolute;
+  top: auto;
+  right: 25%;
+  bottom: 50%;
+  left: auto;
+  z-index: 0;
+  overflow: visible;
+  background: radial-gradient(circle at center, #64db73, #50e0c1);
+  opacity: 1;
+}
+#card_2 .card__min {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 60%;
+  left: 40%;
+  z-index: 1;
+  overflow: visible;
+  background: radial-gradient(circle at center, #533d9c, #9f5ee9);
+  opacity: 1;
+}
+#card_3 .card__maj {
+  width: 170px;
+  height: 300px;
+  border: 0px solid #397ea8;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 50%;
+  left: auto;
+  z-index: 0;
+  overflow: visible;
+  background: linear-gradient(to right, #64db73, #50e0c1);
+  opacity: 1;
+}
+#card_3 .card__min {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 40%;
+  left: auto;
+  z-index: 1;
+  overflow: visible;
+  background: radial-gradient(circle at center, #533d9c, #9f5ee9);
+  opacity: 1;
+}
+#card_4 .card__maj {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 50%;
+  left: 30%;
+  z-index: 1;
+  overflow: visible;
+  background: radial-gradient(circle at center, #64db73, #50e0c1);
+  opacity: 0.8;
+}
+#card_4 .card__min {
+  width: 130px;
+  height: 200px;
+  border: 0px solid #397ea8;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 40%;
+  left: auto;
+  z-index: 0;
+  overflow: visible;
+  background: linear-gradient(to left, #533d9c, #9f5ee9);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

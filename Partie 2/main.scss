@@ -1,0 +1,171 @@
+@use "variables";
+@use "mixin";
+
+section {
+  @include mixin.figure(
+    variables.$width * 12,
+    variables.$height * 5,
+    variables.$radius,
+    variables.$border * 2,
+    variables.$border-primary-color,
+    false
+  );
+  @include mixin.flex(flex, space-around, center);
+}
+.card {
+  @include mixin.figure(
+    variables.$width * 2.5,
+    variables.$height * 4.5,
+    variables.$radius,
+    variables.$border,
+    variables.$border-secondary-color,
+    false
+  );
+  @include mixin.position(relative, auto, auto, auto, auto, auto, hidden);
+}
+#card {
+  &_1 {
+    .card__maj {
+      @include mixin.figure(
+        variables.$width * 2,
+        variables.$height * 2,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        false
+      );
+      @include mixin.position(absolute, auto, 0, auto, auto, 1, visible);
+      @include mixin.linear_gradient(
+        to left,
+        variables.$secondary-color,
+        variables.$secondary-color-light,
+        1
+      );
+    }
+    .card__min {
+      @include mixin.figure(
+        variables.$width * 1.5,
+        variables.$height * 1.5,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        false
+      );
+      @include mixin.position(absolute, auto, auto, 50%, auto, 2, visible);
+      @include mixin.linear_gradient(
+        to right,
+        variables.$primary-color,
+        variables.$primary-color-light,
+        0.8
+      );
+    }
+  }
+  &_2 {
+    .card__maj {
+      @include mixin.figure(
+        variables.$width * 3,
+        variables.$height * 3.5,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        true
+      );
+      @include mixin.position(absolute, auto, 25%, 50%, auto, 0, visible);
+      @include mixin.radial_gradient(
+        circle at center,
+        variables.$primary-color,
+        variables.$primary-color-light,
+        1
+      );
+    }
+    .card__min {
+      @include mixin.figure(
+        variables.$width * 2.5,
+        variables.$height * 2.5,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        true
+      );
+      @include mixin.position(absolute, auto, auto, 60%, 40%, 1, visible);
+      @include mixin.radial_gradient(
+        circle at center,
+        variables.$secondary-color,
+        variables.$secondary-color-light,
+        1
+      );
+    }
+  }
+  &_3 {
+    .card__maj {
+      @include mixin.figure(
+        variables.$width * 1.7,
+        variables.$height * 3,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        false
+      );
+      @include mixin.position(absolute, auto, 0, 50%, auto, 0, visible);
+      @include mixin.linear_gradient(
+        to right,
+        variables.$primary-color,
+        variables.$primary-color-light,
+        1
+      );
+    }
+    .card__min {
+      @include mixin.figure(
+        variables.$width * 1.25,
+        variables.$height * 1.25,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        true
+      );
+      @include mixin.position(absolute, auto, 0, 40%, auto, 1, visible);
+      @include mixin.radial_gradient(
+        circle at center,
+        variables.$secondary-color,
+        variables.$secondary-color-light,
+        1
+      );
+    }
+  }
+  &_4 {
+    .card__maj {
+      @include mixin.figure(
+        variables.$width * 3,
+        variables.$height * 3,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        true
+      );
+      @include mixin.position(absolute, auto, auto, 50%, 30%, 1, visible);
+      @include mixin.radial_gradient(
+        circle at center,
+        variables.$primary-color,
+        variables.$primary-color-light,
+        0.8
+      );
+    }
+    .card__min {
+      @include mixin.figure(
+        variables.$width * 1.3,
+        variables.$height * 2,
+        variables.$radius,
+        variables.$border * 0,
+        variables.$border-primary-color,
+        false
+      );
+      @include mixin.position(absolute, auto, auto, 40%, auto, 0, visible);
+      @include mixin.linear_gradient(
+        to left,
+        variables.$secondary-color,
+        variables.$secondary-color-light,
+        1
+      );
+    }
+  }
+}

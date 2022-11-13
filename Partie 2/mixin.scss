@@ -1,0 +1,40 @@
+@mixin figure(
+  $width,
+  $height,
+  $radius,
+  $border,
+  $border-color,
+  $flag_circle: false
+) {
+  @if $flag_circle {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+  } @else {
+    width: $width;
+    height: $height;
+    border: $border solid $border-color;
+  }
+}
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin position($position, $top, $right, $bottom, $left, $z-index, $overflow) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+  overflow: $overflow;
+}
+@mixin linear_gradient($direction, $start-color, $end-color, $opacity) {
+  background: linear-gradient($direction, $start-color, $end-color);
+  opacity: $opacity;
+}
+@mixin radial_gradient($direction, $start-color, $end-color, $opacity) {
+  background: radial-gradient($direction, $start-color, $end-color);
+  opacity: $opacity;
+}

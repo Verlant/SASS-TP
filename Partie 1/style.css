@@ -1,0 +1,37 @@
+.fig_1 {
+  background-color: lightgreen;
+  width: 200px;
+  height: 200px;
+}
+
+.fig_2 {
+  background-color: mediumpurple;
+  width: 200px;
+  height: 200px;
+}
+
+.fig_3 {
+  background-color: lightgreen;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.fig_4 {
+  background-color: mediumpurple;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.fig_1,
+.fig_2 {
+  margin: 10px;
+}
+
+.fig_3,
+.fig_4 {
+  margin: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

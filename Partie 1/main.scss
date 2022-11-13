@@ -1,0 +1,62 @@
+@use "variables";
+@use "mixin";
+// $bg-red: red;
+// $bg-blue: blue;
+// $size: 200px;
+
+// .fig_1, .fig_2, .fig_3, .fig_4 {
+//     width: $size;
+//     height: $size;
+// }
+
+// .fig_1, .fig_3 {
+//     background-color: $bg-red;
+// }
+
+// .fig_2, .fig_4 {
+//     background-color: $bg-blue;
+// }
+
+// .fig_3, .fig_4 {
+//     border-radius: $size;
+// }
+.fig_1 {
+  @include mixin.figure(
+    variables.$primary,
+    variables.$size,
+    variables.$radius,
+    false
+  );
+}
+.fig_2 {
+  @include mixin.figure(
+    variables.$secondary,
+    variables.$size,
+    variables.$radius,
+    false
+  );
+}
+.fig_3 {
+  @include mixin.figure(
+    variables.$primary,
+    variables.$size,
+    variables.$radius,
+    true
+  );
+}
+.fig_4 {
+  @include mixin.figure(
+    variables.$secondary,
+    variables.$size,
+    variables.$radius,
+    true
+  );
+}
+.fig_1,
+.fig_2 {
+  @include mixin.marge(10px);
+}
+.fig_3,
+.fig_4 {
+  @include mixin.marge(20px);
+}
